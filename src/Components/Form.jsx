@@ -7,7 +7,7 @@ const Input = ({ handleAdd }) => {
 
   const generateID = () => Math.round(Math.random() * 1000);
 
-  const Verification = () => {
+  const handleVerification = () => {
     if (!desc || !amount) {
       alert("Você precisa informar a descrição e o valor");
     } else if (amount < 1) {
@@ -41,6 +41,7 @@ const Input = ({ handleAdd }) => {
             value={desc}
             className="w-[15rem] border-2"
             onChange={(e) => setDesc(e.target.value)}
+            required
           />
           <input
             type="number"
@@ -58,10 +59,13 @@ const Input = ({ handleAdd }) => {
           <input
             type="radio"
             name="opção"
-            onChange={() => setExpense(isExpense)}
+            onChange={() => setExpense(!isExpense)}
           />
           Saída
-          <button className="bg-cyanPrimary p-2 rounded" onClick={Verification}>
+          <button
+            className="bg-cyanPrimary p-2 rounded"
+            onClick={handleVerification}
+          >
             Adicionar
           </button>
         </div>
