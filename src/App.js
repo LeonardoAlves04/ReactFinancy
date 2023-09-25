@@ -11,6 +11,7 @@ function App() {
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
   const [total, setTotal] = useState(0);
+  const [itens, setItens] = useState(0)
 
   useEffect(() => {
     const amountIncome = transactionsList
@@ -36,12 +37,17 @@ function App() {
     localStorage.setItem("transactions", JSON.stringify(newArrayTransactions))
   }
 
+  const onDelete = (ID) => {
+    const newArray = itens.filter((transaction) => transaction.id !== ID);
+    setItens(newArray);
+    localStorage.setItem("transactions", JSON.stringify(newArray))
+  }
   return (
     <div>
       <Header />
       <Container income={income} expense={expense} total={total} />
       <Form handleAdd={handleAdd} />
-      <Table />
+      <Table itens={itens} onDelete={onDelete} />
     </div >
   );
 }
