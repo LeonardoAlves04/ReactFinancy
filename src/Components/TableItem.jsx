@@ -3,9 +3,9 @@ import React from "react";
 const TableItem = ({ item, onDelete }) => {
   return (
     <div>
-      <div className="flex mt-[5px]">
+      <div className="flex mt-[15px]">
         <div className="">
-          <h1 className="w-[10rem]">{item.desc}</h1>
+          <h1 className="w-[16rem] rounded-xl bg-cyan-700">{item.desc}</h1>
         </div>
 
         <div className="m-auto ">

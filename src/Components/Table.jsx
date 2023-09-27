@@ -13,8 +13,8 @@ const Table = ({ itens, setItens }) => {
       <div className="">
         <div className="flex ">
           <p className="text-xl font-bold">Descrição</p>
-          <p className="text-xl font-bold ml-[22rem]">Valor</p>
-          <p className="text-xl font-bold ml-[18rem]">Tipo</p>
+          <p className="text-xl font-bold ml-[25rem]">Valor</p>
+          <p className="text-xl font-bold ml-[15rem]">Tipo</p>
         </div>
         <div className="w-[58rem] h-[1px] bg-[#000] mt-[5px] "></div>
         <div>

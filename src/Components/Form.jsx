@@ -65,7 +65,7 @@ const Input = ({ handleAdd, transactionsList, setTransactionsList }) => {
           />
           Saída
           <button
-            className="bg-cyanPrimary p-2 rounded"
+            className="bg-cyanPrimary p-2 rounded border-2"
             onClick={handleVerification}
           >
             Adicionar
