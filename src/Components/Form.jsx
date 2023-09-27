@@ -1,6 +1,7 @@
 import { React, useState } from "react";
+import Table from "./Table";
 
-const Input = ({ handleAdd }) => {
+const Input = ({ handleAdd, transactionsList, setTransactionsList }) => {
   const [desc, setDesc] = useState("");
   const [amount, setAmount] = useState("");
   const [isExpense, setExpense] = useState(false);
@@ -29,7 +30,7 @@ const Input = ({ handleAdd }) => {
 
   return (
     <div className="flex p-5 justify-center shadow-2xl rounded-2xl w-[66rem] m-auto mt-10 bg-white">
-      <div className="">
+      <div className="ml-20">
         <div className="flex space-x-[13rem]">
           <p className="text-xl font-bold">Descrição</p>
           <p className="text-xl font-bold">Valor</p>
@@ -69,6 +70,7 @@ const Input = ({ handleAdd }) => {
             Adicionar
           </button>
         </div>
+        <Table itens={transactionsList} setItens={setTransactionsList} />
       </div>
     </div>
   );

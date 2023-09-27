@@ -2,8 +2,8 @@ import './App.css';
 import Header from './Components/Header';
 import Container from './Components/Container';
 import Form from './Components/Form';
-import Table from './Components/Table';
 import { useEffect, useState } from 'react';
+
 
 function App() {
   const data = localStorage.getItem("transactions");
@@ -11,7 +11,7 @@ function App() {
   const [income, setIncome] = useState(0);
   const [expense, setExpense] = useState(0);
   const [total, setTotal] = useState(0);
-  const [itens, setItens] = useState(0)
+
 
   useEffect(() => {
     const amountIncome = transactionsList
@@ -37,17 +37,11 @@ function App() {
     localStorage.setItem("transactions", JSON.stringify(newArrayTransactions))
   }
 
-  const onDelete = (ID) => {
-    const newArray = itens.filter((transaction) => transaction.id !== ID);
-    setItens(newArray);
-    localStorage.setItem("transactions", JSON.stringify(newArray))
-  }
   return (
     <div>
       <Header />
       <Container income={income} expense={expense} total={total} />
-      <Form handleAdd={handleAdd} />
-      <Table itens={itens} onDelete={onDelete} />
+      <Form handleAdd={handleAdd} transactionsList={transactionsList} setTransactionsList={setTransactionsList} />
     </div >
   );
 }
