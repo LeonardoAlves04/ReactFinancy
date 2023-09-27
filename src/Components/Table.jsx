@@ -9,14 +9,14 @@ const Table = ({ itens, setItens }) => {
   };
 
   return (
-    <div className="flex p-10 shadow-2xl bg-white rounded-2xl w-[66rem]  ">
+    <div className="flex p-8 shadow-2xl bg-greyPrimary rounded-2xl m-auto mt-[20px]">
       <div className="">
-        <div className="flex">
-          <p className="text-xl font-bold ">Descrição</p>
-          <p className="text-xl font-bold ml-[20rem]">Valor</p>
-          <p className="text-xl font-bold ml-[22rem]">Tipo</p>
+        <div className="flex ">
+          <p className="text-xl font-bold">Descrição</p>
+          <p className="text-xl font-bold ml-[22rem]">Valor</p>
+          <p className="text-xl font-bold ml-[18rem]">Tipo</p>
         </div>
-        <div className="w-[60rem] h-[1px] bg-[#000] mt-[5px]"></div>
+        <div className="w-[58rem] h-[1px] bg-[#000] mt-[5px] "></div>
         <div>
           {itens?.map((item, index) => (
             <TableItem key={index} item={item} onDelete={onDelete} />

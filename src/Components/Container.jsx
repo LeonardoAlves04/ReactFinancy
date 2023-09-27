@@ -11,8 +11,9 @@ const Container = ({ income, expense, total }) => {
           className="m-auto text-xl h-[30px]"
         />
 
-        <h1 className="font-bold text-2xl mt-12 ">
-          Entrada: <span className="text-xl">R$ {income}</span>
+        <h1 className="font-bold text-2xl mt-[1rem]">
+          Entrada: <br />
+          <span className="text-xl"> {income}</span>
         </h1>
       </div>
       <div className="p-5 shadow-2xl rounded-lg mt-5 min-w-[300px] text-center bg-white">
@@ -21,14 +22,16 @@ const Container = ({ income, expense, total }) => {
           alt="arrowDown"
           className="m-auto text-xl h-[30px]"
         />
-        <h1 className="font-bold text-2xl mt-12 ">
-          Saída: <span className="text-xl">R$ {expense}</span>
+        <h1 className="font-bold text-2xl  mt-[1rem]">
+          Saída: <br />
+          <span className="text-xl">{expense}</span>
         </h1>
       </div>
       <div className="p-5 shadow-2xl rounded-lg mt-5 min-w-[300px] text-center bg-white">
         <FaDollarSign className="m-auto mb-[10px]  text-2xl" />
-        <h1 className="font-bold text-2xl mt-12 ">
-          Saldo: <span className="text-xl ">R$ {total}</span>
+        <h1 className="font-bold text-2xl  mt-[1rem] ">
+          Saldo: <br />
+          <span className="text-xl "> {total}</span>
         </h1>
       </div>
     </div>

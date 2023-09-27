@@ -3,26 +3,26 @@ import React from "react";
 const TableItem = ({ item, onDelete }) => {
   return (
     <div>
-      <div className="flex mt-[5px] space-x-20 ">
+      <div className="flex mt-[5px]">
         <div className="">
-          <h1 className="max-w-[5rem]">{item.desc}</h1>
+          <h1 className="w-[10rem]">{item.desc}</h1>
         </div>
 
-        <div>
-          <h1 className="ml-[16rem] mr-[16rem]">{item.amount}</h1>
+        <div className="m-auto ">
+          <h1>{item.amount}</h1>
         </div>
 
         {item.expense ? (
           <img
             src="./assets/arrowDown.png"
             alt="seta pra cima"
-            className="max-h-[25px] max-w-[25px]"
+            className="h-[25px] w-[25px]"
           />
         ) : (
           <img
             src="./assets/arrowUp.png"
             alt="seta pra cima"
-            className="max-h-[25px] max-w-[25px] ml-20"
+            className="h-[25px] w-[25px]"
           />
         )}
 
@@ -30,7 +30,7 @@ const TableItem = ({ item, onDelete }) => {
           <img
             src="./assets/bin.png"
             alt="lixeira"
-            className="max-h-[25px] max-w-[25px] cursor-pointer"
+            className="h-[25px] w-[25px] cursor-pointer ml-[90px]"
             onClick={() => onDelete(item.id)}
           />
         </div>

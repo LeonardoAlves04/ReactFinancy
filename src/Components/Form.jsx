@@ -29,8 +29,8 @@ const Input = ({ handleAdd, transactionsList, setTransactionsList }) => {
   };
 
   return (
-    <div className="flex p-5 justify-center shadow-2xl rounded-2xl w-[66rem] m-auto mt-10 bg-white">
-      <div className="ml-20">
+    <div className="flex p-5 justify-center shadow-2xl rounded-2xl w-[66rem] m-auto mt-10 bg-white ">
+      <div className="">
         <div className="flex space-x-[13rem]">
           <p className="text-xl font-bold">Descrição</p>
           <p className="text-xl font-bold">Valor</p>
@@ -42,6 +42,7 @@ const Input = ({ handleAdd, transactionsList, setTransactionsList }) => {
             value={desc}
             className="w-[15rem] border-2"
             onChange={(e) => setDesc(e.target.value)}
+            maxLength={25}
             required
           />
           <input
