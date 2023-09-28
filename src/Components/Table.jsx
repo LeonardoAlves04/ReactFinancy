@@ -9,7 +9,7 @@ const Table = ({ itens, setItens }) => {
   };
 
   return (
-    <div className="flex p-8 shadow-2xl bg-greyPrimary rounded-2xl m-auto mt-[20px]">
+    <div className="flex p-8 shadow-2xl rounded-sm bg-greyPrimary  m-auto mt-[20px]">
       <div className="">
         <div className="flex ">
           <p className="text-xl font-bold">Descrição</p>
