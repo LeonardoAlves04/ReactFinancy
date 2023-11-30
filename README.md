@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
   <img src="http://img.shields.io/static/v1?label=Tailwind&message=biblioteca&color=red&style=for-the-badge&logo=tailwind"/>
-  <img src="http://img.shields.io/static/v1?label=localStorage&message=persistência&color=red&style=for-the-badge&logo="/>
+  <img src="http://img.shields.io/static/v1?label=localstorage&message=biblioteca&color=red&style=for-the-badge&logo="/>
 </p>
 
 > Status do Projeto: :heavy_check_mark: Concluído!
